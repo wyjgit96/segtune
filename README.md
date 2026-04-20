@@ -1,7 +1,7 @@
 # SegTune: Structured and Fine-Grained Control for Song Generation
 
 <p align="center">
-  🎵 <a href="https://zcnyyzaglbh1.feishu.cn/wiki/LcxSwm1zCi4OSEkL2fMcQFFCn8b">Demo</a> • 📄 <a href="#citation">Paper (Coming Soon)</a> • 📚 <a href="#citation">Citation</a>
+  🎵 <a href="https://zcnyyzaglbh1.feishu.cn/wiki/LcxSwm1zCi4OSEkL2fMcQFFCn8b">Demo</a> • 📄 <a href="#citation">Paper (Coming Soon)</a> 
 </p>
 
 This repository is the official implementation for "SegTune: Structured and Fine-Grained Control for Song Generation". In this repository, we provide the training and inference scripts of the SegTune model, and evaluation pipelines.
@@ -180,19 +180,4 @@ We thank the following open-source projects that make SegTune possible:
 - **[LangSegment](https://github.com/juntaosun/LangSegment)** (juntaosun): Multilingual text segmentation library used in the G2P pipeline for mixed-language lyric processing.
 - **[phonemizer](https://github.com/bootphon/phonemizer)** (bootphon): Multilingual text-to-phoneme conversion via the eSpeak-NG backend, used in G2P processing.
 
-## Citation
 
-If you find our work useful, please cite:
-
-```bibtex
-@article{segtune2026,
-  title={SegTune: Structured and Fine-Grained Control for Song Generation},
-  author={Yuejiao Wang*, Zihao Ji*, Pengfei Cai*, Xu Li†, Haorui Zheng, Zewen Song, Zhongliang Liu, Chen Zhang, Pengfei Wan},
-  journal={The 64th Annual Meeting of the Association for Computational Linguistics（ACL 2026）},
-  year={2026}
-}
-```
-
-## Contact
-
-For questions and discussions, please contact us at yuejiaowang@link.cuhk.edu.hk or lixu15@kuaishou.com.
