@@ -1,0 +1,6 @@
+{
+    "AZURE_OPENAI_ENDPOINT": "https://mmu-video-openai-eastus2.openai.azure.com/",
+    "AZURE_OPENAI_API_KEY": "F4ML7yvy0dGWWWoHzQEfORBZhGYU21mD4jgozclfvQd44RxLBeeTJQQJ99BDACHYHv6XJ3w3AAABACOGYLm4",
+    "AZURE_OPENAI_DEPLOYMENT_NAME": "mmu-video-openai-eastus2-gpt-4o",
+    "AZURE_OPENAI_API_VERSION": "2024-02-01"
+}

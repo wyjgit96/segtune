@@ -1,0 +1,47 @@
+# 微调训练配置文件
+# 通过命令行传入: python fine_tuning.py --config configs/config.yaml
+
+# 模型配置
+model:
+  name: "Qwen/Qwen3-4B-Base"  # or set to local path: /path/to/Qwen3-4B-Base
+  output_dir: "./exps/debug/fine_tuned_model"
+
+# LoRA配置
+lora:
+  rank: 32                    # LoRA rank
+  alpha: 32                   # LoRA alpha
+  dropout: 0.1                # LoRA dropout
+  target_modules:             # 目标模块
+    - "q_proj"
+    - "k_proj" 
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+
+# 训练配置
+training:
+  num_epochs: 10
+  batch_size:  1                    # 每个GPU的batch size
+  gradient_accumulation_steps: 4   # 梯度累积步数
+  learning_rate: 1.0e-5              # 学习率
+  warmup_steps: 20                # 预热步数
+  max_grad_norm: 1.0               # 梯度裁剪阈值
+
+# 数据配置
+data:
+  max_new_tokens: 4096                 # 最大序列长度
+  max_length: 8192
+  validation_size: 1              # 验证集大小
+  train_data_path: "datasets/prompts.jsonl"
+
+# 其他配置
+misc:
+  seed: 42                         # 随机种子
+  save_steps: 20                  # 保存步数
+  eval_steps: 20                  # 评估步数
+  logging_steps: 20               # 日志步数
+  save_total_limit: 2              # 保存检查点数量限制
+  save_only_model: true
+  gradient_checkpointing: false
